@@ -1,18 +1,18 @@
 {% set name = "buildbot-console-view" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 20f42bd24497e8ef7d3356f4fd96eaebb056b92e89e7043f709c87b556f2aaf2
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 482938aea943f1263f01f6ed79c6f665d8dcc8020a58b725ac9599b85539f40e
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -29,12 +29,12 @@ test:
     - buildbot_console_view
 
 about:
-  home: "https://buildbot.net/"
-  license: "GNU General Public (GPL)"
-  license_family: "LGPL"
-  license_file: "LICENSE"
-  summary: "Buildbot Console View plugin"
-  doc_url: "https://docs.buildbot.net"
+  home: https://buildbot.net/
+  license: GNU General Public (GPL)
+  license_family: LGPL
+  license_file: LICENSE
+  summary: Buildbot Console View plugin
+  doc_url: https://docs.buildbot.net
 
 extra:
   recipe-maintainers:
