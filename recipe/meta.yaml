@@ -1,5 +1,5 @@
 {% set name = "buildbot-console-view" %}
-{% set version = "2.9.3" %}
+{% set version = "2.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bfa65d2304f121d751e4e4ca940aae23e62aaf3fdb173b61ccdd42b1953a16e4
+  sha256: 8b314230889cc4bf4233d367d8adec5d40db5dbcc4d1f199f2538bdae13890ca
 
 build:
   number: 0
