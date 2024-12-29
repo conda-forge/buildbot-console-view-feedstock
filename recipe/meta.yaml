@@ -10,18 +10,18 @@ source:
   sha256: 5df10b597e9de0b6ade41c8d72c770f6a25dec58d418bf0646a2645872a3a132
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >3.5
+    - python {{ python_min }}
     - buildbot-pkg
     - setuptools
   run:
-    - python >3.5
+    - python >={{ python_min }}
     - buildbot-pkg
     - buildbot-www
 
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://buildbot.net/
